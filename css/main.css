@@ -1,0 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Encode Sans SC', sans-serif;
+   }
+   
+   .contenedor {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: repeat(3, minmax(1fr, auto));
+     grid-template-areas: "header header"
+                          "section section"
+                          "footer footer";
+   }
+   
+   header {
+     grid-area: header;
+     background: rgb(2,0,36);
+    background: linear-gradient(34deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(0,212,255,1) 100%);
+     
+     display: flex;
+     justify-content: space-evenly;
+
+      
+   }
+   
+   section {
+     grid-area: section;
+     background-color: violet;
+     
+   }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+   footer {
+     grid-area: footer;
+     background-color: rgba(0, 60, 255, 0.39);
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+ 
+   }
+
+footer ul {
+    list-style: none;
+    
+}
+
+/*columnas*/
+
+.colum-1   {
+    column-count: 1;
+    background-color: crimson;
+    color: white;
+    border: 1px solid;
+    width: 300px;
+}
+
+.colum-2   {
+  column-count: 1;
+  background-color: rgba(23, 20, 220, 0.356);
+    color: white;
+    border: 1px solid;
+    column-width: 400px;
+    text-align: center;
+}
+ 
+
+.colum-3   {
+  column-count: 1;
+  background-color: rgba(255, 255, 255, 0.459);
+  color: white;
+  border: 1px solid;
+  width: 300px;
+ 
+}
+
+
+
+
+
+/*flex-items Header*/
+   .header-left {
+     width: 25%;
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-end;
+   }
+   
+   .header-rigth {
+     width: 40%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: flex-end;
+   }
+   
+   /*flex-items header-left*/
+   .nom-escuela {
+     font-size: 20px;
+     color: white;
+   }
+   
+   .logo-header {
+     position: relative;
+     top: 40px;
+     z-index: 2;
+     
+   }
+   
+   /*flex-items header-rigth*/
+   nav {
+    position: relative;
+    z-index: 2;
+    top: 20px;
+    
+   }
+  nav ul {
+   
+     width: 650px;
+     display: flex;
+     justify-content: space-evenly;
+     border-radius: 3px 3px 3px 3px;
+     background-image: linear-gradient(to top, #4481eb 0%, #04c0fe34 100%);
+   }
+   
+  nav ul a {
+     display: block;
+     font-size: 18px;
+     text-decoration: none;
+     padding: 5px 20px;
+     color: white;
+     font-weight: bold;
+     
+   }
+   
+   .social a {
+     font-size: x-large;
+   }
+   
+
+   /*Slider*/
+.slider{
+    width: 100%;
+    height: 530px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    top:-10px;
+     
+      
+  }
+  .slider ul{
+      display: flex;
+      animation: cambio 20s infinite alternate linear;
+      width: 400%;
+  }
+  .slider li{
+      width: 100%;
+      list-style: none;
+  }
+  .slider img{
+      width: 100%;
+      height: 530px;
+  }
+  @keyframes cambio{
+      0%{margin-left: 0;}
+      20%{margin-left: 0;}
+      
+      25%{margin-left: -100%;}
+      45%{margin-left: -100%;}
+      
+      50%{margin-left: -200%;}
+      70%{margin-left: -200%;}
+      
+      75%{margin-left: -300%;}
+      100%{margin-left: -300%;}
+  }
+
+
+ 
